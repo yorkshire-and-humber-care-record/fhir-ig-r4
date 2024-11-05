@@ -1,0 +1,110 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+		a[name="2"] {
+			pointer-events: none;
+		}
+		img.diagram {			
+			width: 90%;
+			padding:10px 0px 10px 0px;
+		}
+	</style>
+	<h4>Differences between Interweave STU3 and R4 profiles</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Element name</th>
+				<th>Change details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>basedOn</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Type ServiceRequest</li>
+                        <li>Type Reference: Removed Target Types ReferralRequest, ProcedureRequest</li>
+					</ul>
+				</td>
+			</tr>
+            <tr>
+				<td>partOf</td>
+				<td>
+					<ul>
+						<li>Renamed from parent to partOf</li>
+					</ul>
+				</td>
+			</tr>
+            <tr>
+				<td>questionnaire</td>
+				<td>
+					<ul>
+						<li>Type changed from Reference(Questionnaire) to canonical(Questionnaire)</li>
+					</ul>
+				</td>
+			</tr>
+            <tr>
+				<td>status</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-CodesQuestionnaireResponseStatus-1 to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-QuestionnaireResponseStatus</li>
+					</ul>
+				</td>
+			</tr>
+            <tr>
+				<td>encounter</td>
+				<td>
+					<ul>
+						<li>Renamed from context to encounter</li>
+					</ul>
+				</td>
+			</tr>
+            <tr>
+				<td>author</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Types PractitionerRole, Organization</li>
+					</ul>
+				</td>
+			</tr>
+            <tr>
+				<td>source</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Type PractitionerRole</li>
+					</ul>
+				</td>
+			</tr>
+            <tr>
+				<td>item.subject</td>
+				<td>
+					<ul>
+						<li>Deleted</li>
+					</ul>
+				</td>
+			</tr>            
+			</tbody>
+	</table>
+	<h4>Graphical relationship diagram</h4>
+	<img class="diagram" src="./Relations/QuestionnaireResponse.png" alt="Graphical relationship diagram of questionnaire response resource"></img>
+</div>

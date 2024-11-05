@@ -1,0 +1,77 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+		a[name="2"] {
+			pointer-events: none;
+		}
+		img.diagram {			
+			width: 90%;
+			padding:10px 0px 10px 0px;
+		}
+	</style>
+	<h4>Differences between Interweave STU3 and R4 profiles</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Element name</th>
+				<th>Change details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>identifier:localIdentifier.system</td>
+				<td>
+					<ul>
+						<li>Changed fixed value from https://fhir.yhcr.nhs.uk/Id/local-location-identifier to https://fhir.interweavedigital.nhs.uk/Id/local-location-identifier</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>type</td>
+				<td>
+					<ul>
+						<li>Change valueSet from http://hl7.org/fhir/ValueSet/v3-ServiceDeliveryLocationRoleType to http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>hoursOfOperation</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>availabilityExceptions</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>						
+			</tbody>
+	</table>
+	<!-- <h4>Graphical relationship diagram</h4>
+	<img class="diagram" src="./Relations/Location.png" alt="Location graphical relationship diagram"></img> -->
+</div>

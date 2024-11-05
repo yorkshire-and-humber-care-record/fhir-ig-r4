@@ -1,0 +1,161 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+	</style>
+	<h4>Recent Changes to the R4 IG Guide</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Change details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>24-07-2024</td>
+				<td>
+					<ul>
+						<li>diagnosticReport: notes and relation diagram added.</li>
+						<li>documentReference: intro and notes added.</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>25-07-2024</td>
+				<td>
+					<ul>
+						<li>documentReference: relationship diagram added.</li>
+						<li>Encounter: intro added.</li>		
+						<li>EncounterGrouping: intro added.</li>				
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>31-07-2024</td>
+				<td>
+					<ul>
+						<li>Encounter: notes added.</li>		
+						<li>EncounterGrouping: notes added.</li>
+						<li>EpisodeOfCare: intro added</li>
+						<li>Flag: intro added</li>
+						<li>HealthCareService: intro added</li>			
+						<li>Location: intro added</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>09-08-2024</td>
+				<td>
+					<ul>
+						<li>EpisodeOfCare: notes added</li>
+						<li>Flag: notes added</li>
+						<li>HealthCareService: notes added</li>			
+						<li>Location: notes added</li>
+						<li>MedicationAdministration: intro added</li>
+						<li>Medication: intro added</li>
+						<li>MedicationRequest: intro added</li>
+						<li>OperationOutcome: intro added</li>
+						<li>OrganizationalTeam: intro added</li>
+						<li>Organization: intro added</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>09-09-2024</td>
+				<td>
+					<ul>
+						<li>PractitionerRole: intro added</li>
+						<li>procedure: intro added</li>
+						<li>QuestionnaireResponse: intro added</li>			
+						<li>RelatedPerson: intro added</li>
+						<li>Schedule: intro added</li>
+						<li>Slot: intro added</li>
+						<li>Observation: intro added</li>
+						<li>Observation-VitalSigns-HeartRate: intro added</li>
+						<li>Observation-VitalSigns-OxygenSaturation: intro added</li>
+						<li>Observation-VitalSigns-BreathingAir: intro added</li>
+						<li>Observation-AssessmentScore: intro added</li>
+						<li>Observation-ACVPU: intro added</li>
+						<li>Observation-NEWS2Score: intro added</li>
+						<li>Observation-VitalSigns-BodyWeight: intro added</li>
+						<li>Observation-VitalSigns-BodyHeight: intro added</li>
+						<li>Observation-VitalSigns-RespirationRate: intro added</li>
+						<li>Observation-Pregnancy-EDD: intro added</li>						
+						<li>Observation-VitalSigns-BloodPressure: intro added</li>
+						<li>Observation-VitalSigns-BodyTemperature: intro added</li>
+						<li>Observation-VitalSigns: intro added</li>
+						<li>Observation-SocialCareEquipmentProvision: intro added</li>
+						<li>Observation-SocialCareAssessment: intro added</li>
+						<li>Observation-SocialCareService: intro added</li>
+						<li>Observation-SocialCareSupportReason: intro added</li>
+						<li>Location: Examples added (X8)</li>
+						<li>Organization: Examples added (X2)</li>
+						<li>OperationOutcome: Examples added (X1)</li>
+						<li>PractitionerRole: Examples added (X1)</li>
+						<li>Practitioner: Examples added (X2)</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>30-09-2024</td>
+				<td>
+					<ul>
+						<li>MedicationAdministration: notes added</li>
+						<li>Medication: notes added</li>
+						<li>MedicationRequest: notes added</li>
+						<li>Observation: notes added</li>
+						<li>Observation-ACVPU: notes added</li>
+						<li>Observation-AssessmentScore: notes added</li>
+						<li>Observation-NEWS2Score: notes added</li>
+						<li>Observation-VitalSigns: notes added</li>
+						<li>Observation-VitalSigns-BodyHeight: notes added</li>
+						<li>Observation-VitalSigns-BodyWeight: notes added</li>
+						<li>Observation-VitalSigns-HeartRate: notes added</li>
+						<li>Observation-VitalSigns-BodyTemperature: notes added</li>
+						<li>Observation-VitalSigns-BreathingAir: notes added</li>
+						<li>Observation-VitalSigns-OxygenSaturation: notes added</li>
+						<li>Observation-VitalSigns-RespirationRate: notes added</li>
+						<li>Observation-VitalSigns-BloodPressure: notes added</li>
+						<li>Observation-Pregnancy-EDD: notes added</li>
+						<li>OperationOutcome: notes added</li>
+						<li>Organization: notes added</li>
+						<li>OrganizationalTeam: notes added</li>
+						<li>Practitioner: notes added</li>
+						<li>PractitionerRole: notes added</li>
+						<li>Procedure: notes added</li>
+						<li>QuestionnaireResponse: notes added</li>
+						<li>RelatedPerson: notes added</li>
+						<li>Schedule: notes added</li>
+						<li>Slot: notes added</li>
+						<li>SocialCareAssessment: notes added</li>
+						<li>SocialCareEquipmentProvision: notes added</li>
+						<li>SocialCareService: notes added</li>
+						<li>SocialCareSupportReason: notes added</li>
+						<li>AllergyIntolerance: relationship diagram updated</li>
+						<li>Appointment: relationship diagram updated</li>
+					</ul>
+				</td>
+			</tr>
+			</tbody>
+	</table>
+</div>

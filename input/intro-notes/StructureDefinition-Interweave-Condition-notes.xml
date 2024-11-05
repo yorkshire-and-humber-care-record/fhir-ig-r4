@@ -1,0 +1,141 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+		a[name="2"] {
+			pointer-events: none;
+		}
+		img.diagram {
+			width: 90%;
+			padding:10px 0px 10px 0px;
+		}
+	</style>
+	<h4>Differences between Interweave STU3 and R4 profiles</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Element name</th>
+				<th>Change details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>extension:conditionEpisode</td>
+				<td>
+					<ul>
+						<li>Renamed extension name from episodicity to conditionEpisode</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>identifier:localIdentifier.system</td>
+				<td>
+					<ul>
+						<li>Changed Fixed value from https://fhir.yhcr.nhs.uk/Id/local-condition-identifier to https://fhir.interweavedigital.nhs.uk/Id/local-condition-identifier</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>clinicalStatus</td>
+				<td>
+					<ul>
+						<li>Type changed from code to CodeableConcept</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>verificationStatus</td>
+				<td>
+					<ul>
+						<li>Type changed from code to CodeableConcept</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>category</td>
+				<td>
+					<ul>
+						<li>Changed ValueSet from https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionCategory-1 to http://hl7.org/fhir/ValueSet/condition-clinical </li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>code</td>
+				<td>
+					<ul>
+						<li>Changed ValueSet from https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionCode-1 to https://fhir.hl7.org.uk/ValueSet/UKCore-ConditionCode</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>encounter</td>
+				<td>
+					<ul>
+						<li>Renamed from context to encounter</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>abatement[x]</td>
+				<td>
+					<ul>
+						<li>Removed Type boolean</li>
+					</ul>
+				</td>
+			</tr>	
+			<tr>
+				<td>recordedDate</td>
+				<td>
+					<ul>
+						<li>Renamed from assertedDate to recordedDate</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>asserter</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Type PractitionerRole</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>stage</td>
+				<td>
+					<ul>
+						<li>Max Cardinality changed from 1 to *</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>stage.type</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>	
+			</tbody>
+	</table>
+	<h4>Graphical relationship diagram</h4>
+	<img class="diagram" src="./Relations/Condition.png" alt="Condition resource graphical relationship diagram"></img>
+</div>

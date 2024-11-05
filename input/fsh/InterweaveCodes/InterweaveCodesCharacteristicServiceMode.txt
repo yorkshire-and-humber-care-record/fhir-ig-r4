@@ -1,0 +1,14 @@
+Alias: $ServiceMode = http://hl7.org/fhir/service-mode
+
+ValueSet: InterweaveCodesCharacteristicServiceMode
+Id: Interweave-InterweaveCodesCharacteristicServiceMode-1
+Description: "An example set of Service Modes that could be applicable to use to characterize HealthcareServices or PractitionerRoles.(Pre-adopted from R5)"
+Title: "Interweave Characteristic Service Mode"
+* ^name = "CharacteristicServiceMode"
+* ^status = #draft
+* ^version = "0.0.1"
+* ^date = "2024-07-15"
+* ^experimental = false
+
+* $ServiceMode#in-person "In Person"
+* $ServiceMode#telephone "Telephone"

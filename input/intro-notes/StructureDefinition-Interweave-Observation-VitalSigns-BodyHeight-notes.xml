@@ -1,0 +1,168 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+		a[name="2"] {
+			pointer-events: none;
+		}
+		img.diagram {			
+			width: 90%;
+			padding:10px 0px 10px 0px;
+		}
+	</style>
+	<h4>Differences between Interweave STU3 and R4 profiles</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Element name</th>
+				<th>Change details</th>
+			</tr>
+		</thead>
+		<tbody>			
+			<tr>
+				<td>extension:bodyStructureR5</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:bodyPosition</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:recordingSetting</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>			
+			<tr>
+				<td>category.coding.system</td>
+				<td>
+					<ul>
+						<li>Change of codeSystem from http://hl7.org/fhir/observation-category to http://terminology.hl7.org/CodeSystem/observation-category</li>
+					</ul>
+				</td>
+			</tr>			
+			<tr>
+				<td>code.coding:snomedCT</td>
+				<td>
+					<ul>
+						<li>Added preferred binding to https://fhir.hl7.org.uk/ValueSet/UKCore-BodyHeightMeasurements</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>code.coding:snomedCT.code</td>
+				<td>
+					<ul>
+						<li>Fixed value removed</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>code.coding:snomedCT.display</td>
+				<td>
+					<ul>
+						<li>Fixed value removed</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>encounter</td>
+				<td>
+					<ul>
+						<li>Renamed from context to encounter</li>
+					</ul>
+				</td>
+			</tr>			
+			<tr>
+				<td>effective[x]</td>
+				<td>
+					<ul>
+						<li>Add Type instant</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>performer</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Types PractitionerRole, CareTeam</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>valueQuantity.unit</td>
+				<td>
+					<ul>
+						<li>Added fixed value: <i><b>meter</b></i></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>valueQuantity.system</td>
+				<td>
+					<ul>
+						<li>Added fixed value: <i><b>http://unitsofmeasure.org</b></i></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>valueQuantity.code</td>
+				<td>
+					<ul>
+						<li>Added fixed value: <i><b>m</b></i></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>note</td>
+				<td>
+					<ul>
+						<li>Renamed from comment to note</li>
+						<li>Type changed from string to Annotation</li>
+					</ul>
+				</td>
+			</tr>			
+			<tr>
+				<td>derivedFrom</td>
+				<td>
+					<ul>
+						<li>Renamed from related to derivedFrom</li>
+						<li>Type changed from BackboneElement to Reference</li>
+						<li>Type Reference: Added Target Type QuestionnaireResponse</li>				
+					</ul>
+				</td>
+			</tr>
+			</tbody>
+	</table>
+	<!-- <h4>Graphical relationship diagram</h4>
+	<img class="diagram" src="./Slot.png" alt="Graphical relationship diagram of slot resource"></img> -->
+</div>

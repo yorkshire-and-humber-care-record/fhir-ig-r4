@@ -1,0 +1,107 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+		a[name="2"] {
+			pointer-events: none;
+		}
+		img.diagram {			
+			width: 90%;
+			padding:10px 0px 10px 0px;
+		}
+	</style>
+	<h4>Differences between Interweave STU3 and R4 profiles</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Element name</th>
+				<th>Change type</th>
+				<th>Old Value</th>
+				<th>New Value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>extension:category.url</td>
+				<td>Fixed value</td>
+				<td>https://fhir.yhcr.nhs.uk/StructureDefinition/Extension-Interweave-SocialCareServiceCategory</td>
+				<td>https://fhir.interweavedigital.nhs.uk/R4/StructureDefinition/Extension-Interweave-SocialCareServiceCategory</td>
+			</tr>
+			<tr>
+				<td>extension:category.valueCodeableConcept</td>
+				<td>Required valueSet binding</td>
+				<td>https://fhir.yhcr.nhs.uk/ValueSet/Interweave-SocialCareServiceCategory-1</td>
+				<td>https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-SocialCareServiceCategory</td>
+			</tr>
+			<tr>
+				<td>extension:category.valueCodeableConcept</td>
+				<td>codeSystem</td>
+				<td>https://fhir.yhcr.nhs.uk/CodeSystem/Interweave-SocialCareServiceCategory-1</td>
+				<td>https://fhir.interweavedigital.nhs.uk/CodeSystem/Interweave-SocialCareServiceCategory</td>
+			</tr>
+			<tr>
+				<td>extension:triggeringAssessment.url</td>
+				<td>Fixed value</td>
+				<td>https://fhir.yhcr.nhs.uk/StructureDefinition/Extension-Interweave-SocialCareServiceTrigger</td>
+				<td>https://fhir.interweavedigital.nhs.uk/R4/StructureDefinition/Extension-Interweave-SocialCareServiceTrigger</td>
+			</tr>			
+			<tr>
+				<td>identifier:localIdentifier.system</td>
+				<td>Fixed value</td>
+				<td>https://fhir.yhcr.nhs.uk/Id/local-socialcareservice-identifier</td>
+				<td>https://fhir.interweavedigital.nhs.uk/Id/local-socialcareservice-identifier</td>
+			</tr>
+			<tr>
+				<td>status</td>
+				<td>Required valueSet binding</td>
+				<td>https://fhir.yhcr.nhs.uk/ValueSet/Interweave-SocialCareServiceStatus</td>
+				<td>https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-SocialCareServiceStatus</td>
+			</tr>
+			<tr>
+				<td>type</td>
+				<td>Required valueSet binding</td>
+				<td>https://fhir.yhcr.nhs.uk/ValueSet/Interweave-SocialCareServiceType-1</td>
+				<td>https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-SocialCareServiceType</td>				
+			</tr>
+			<tr>
+				<td>type</td>
+				<td>codeSystem</td>
+				<td>https://fhir.yhcr.nhs.uk/CodeSystem/Interweave-SocialCareServiceType-1</td>
+				<td>https://fhir.interweavedigital.nhs.uk/CodeSystem/Interweave-SocialCareServiceType</td>
+			</tr>
+			<tr>
+				<td>referralRequest</td>
+				<td>Type Reference: Target type change</td>
+				<td>ReferralRequest</td>
+				<td>ServiceRequest</td>
+			</tr>
+			<tr>
+				<td>careManager</td>
+				<td>Type Reference: added Target type</td>
+				<td>Practitioner</td>
+				<td>Practitioner | PractitionerRole</td>
+			</tr>			
+			</tbody>
+	</table>
+	<h4>Graphical relationship diagram</h4>
+	<img class="diagram" src="./Relations/SocialCareService.png" alt="Graphical relationship diagram of social care service resource"></img>
+</div>

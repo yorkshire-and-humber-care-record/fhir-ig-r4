@@ -1,0 +1,106 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+		a[name="2"] {
+			pointer-events: none;
+		}
+		img.diagram {			
+			width: 90%;
+			padding:10px 0px 10px 0px;
+		}
+	</style>
+	<h4>Differences between Interweave STU3 and R4 profiles</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Element name</th>
+				<th>Change details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>extension:outcome</td>
+				<td>
+					<ul>
+						<li>url (Fixed value) changed from https://fhir.yhcr.nhs.uk/StructureDefinition/Extension-Interweave-SocialCareAssessmentOutcome to https://fhir.interweavedigital.nhs.uk/R4/StructureDefinition/Extension-Interweave-SocialCareAssessmentOutcome</li>
+						<li>Changed valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-SocialCareAssessmentOutcome-1 to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-SocialCareAssessmentOutcome</li>
+						<li>Change of codeSystem from https://fhir.yhcr.nhs.uk/CodeSystem/Interweave-SocialCareAssessmentOutcome-1 to https://fhir.interweavedigital.nhs.uk/CodeSystem/Interweave-SocialCareAssessmentOutcome</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:performer</td>
+				<td>
+					<ul>
+						<li>url (Fixed value) changed from https://fhir.yhcr.nhs.uk/StructureDefinition/Extension-Interweave-SocialCareAssessmentPerformer to https://fhir.interweavedigital.nhs.uk/R4/StructureDefinition/Extension-Interweave-SocialCareAssessmentPerformer</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>identifier:localIdentifier.system</td>
+				<td>
+					<ul>
+						<li>Changed fixed value from <i>https://fhir.yhcr.nhs.uk/Id/local-socialcareassessment-identifier</i> to https://fhir.interweavedigital.nhs.uk/Id/local-socialcareassessment-identifier</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>status</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-SocialCareAssessmentStatus to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-SocialCareAssessmentStatus</li>
+						<li>Change of codeSystem from http://hl7.org/fhir/stu3/codesystem-task-status to http://hl7.org/fhir/task-status</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>code</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-SocialCareAssessmentType-1 to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-SocialCareAssessmentType</li>
+						<li>Change of codeSystem from https://fhir.yhcr.nhs.uk/CodeSystem/Interweave-SocialCareAssessmentType-1 to https://fhir.interweavedigital.nhs.uk/CodeSystem/Interweave-SocialCareAssessmentType</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>encounter</td>
+				<td>
+					<ul>
+						<li>Renamed from context to encounter</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>output.type</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-SocialCareAssessmentOutputType-1 to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-SocialCareAssessmentOutputType</li>
+						<li>Change of codeSystem from https://fhir.yhcr.nhs.uk/CodeSystem/Interweave-SocialCareAssessmentOutputType-1 to https://fhir.interweavedigital.nhs.uk/CodeSystem/Interweave-SocialCareAssessmentOutputType</li>
+					</ul>
+				</td>
+			</tr>
+			</tbody>
+	</table>
+	<h4>Graphical relationship diagram</h4>
+	<img class="diagram" src="./Relations/SocialCareAssessment.png" alt="Graphical relationship diagram of social care assessment resource"></img>
+</div>

@@ -1,0 +1,266 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+		a[name="2"] {
+			pointer-events: none;
+		}
+		img.diagram {			
+			width: 90%;
+			padding:10px 0px 10px 0px;
+		}
+	</style>
+	<h4>Differences between Interweave STU3 and R4 profiles</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Element name</th>
+				<th>Change details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>extension:medicationRepeatInformation</td>
+				<td>
+					<ul>
+						<li>Renamed form repeatInformation to medicationRepeatInformation</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:medicationRepeatInformation.url</td>
+				<td>
+					<ul>
+						<li>Changed fixed value from https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationRepeatInformation-1 to https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:repeatInformation.extension:numberOfRepeatPrescriptionsAllowed</td>
+				<td>
+					<ul>
+						<li>Deleted</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:medicationRepeatInformation.extension:numberOfPrescriptionsIssued</td>
+				<td>
+					<ul>
+						<li>Renamed from extension:repeatInformation.extension:numberOfRepeatPrescriptionsIssued to extension:medicationRepeatInformation.extension:numberOfPrescriptionsIssued</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:medicationRepeatInformation.extension:numberOfPrescriptionsIssued.url</td>
+				<td>
+					<ul>
+						<li>Changed fixed value from 'numberOfRepeatPrescriptionsIssued' to 'numberOfPrescriptionsIssued'</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:medicationRepeatInformation.extension:LastIssuedDate.url</td>
+				<td>
+					<ul>
+						<li>Changed fixed value from https://fhir.yhcr.nhs.uk/StructureDefinition/Extension-Interweave-MedicationLastIssuedDate-1 to https://fhir.interweavedigital.nhs.uk/R4/StructureDefinition/Extension-Interweave-MedicationLastIssuedDate</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:statusReason</td>
+				<td>
+					<ul>
+						<li>Deleted (added as normal element)</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:prescriptionType</td>
+				<td>
+					<ul>
+						<li>Deleted (added as normal element)</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>status</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from http://hl7.org/fhir/ValueSet/medication-request-status to http://hl7.org/fhir/ValueSet/medicationrequest-status</li>
+						<li>Change of codeSystem from http://hl7.org/fhir/medication-request-status to http://hl7.org/fhir/CodeSystem/medicationrequest-status</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>statusReason</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>intent</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from http://hl7.org/fhir/ValueSet/medication-request-intent to http://hl7.org/fhir/ValueSet/medicationrequest-intent</li>
+						<li>Change of codeSystem from http://hl7.org/fhir/medication-request-intent to http://hl7.org/fhir/CodeSystem/medicationrequest-intent</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>category</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-MedicationRequestCategory-1 to https://fhir.hl7.org.uk/ValueSet/UKCore-MedicationRequestCategory</li>
+						<li>Change of codeSystem from https://fhir.yhcr.nhs.uk/CodeSystem/Interweave-MedicationRequestCategory-1 to http://terminology.hl7.org/CodeSystem/medicationrequest-category</li>
+						<li>Change of codeSystem from http://hl7.org/fhir/medication-request-category to http://terminology.hl7.org/CodeSystem/medicationrequest-category</li>
+						<li>Codes from codeSystem https://fhir.hl7.org.uk/CodeSystem/UKCore-MedicationRequestCategory added</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>reported[x]</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>medication[x]</td>
+				<td>
+					<ul>
+						<li>Choice of dataType CodeableConcept added</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>encounter</td>
+				<td>
+					<ul>
+						<li>Renamed from context to encounter</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>requester</td>
+				<td>
+					<ul>
+						<li>Type changed from BackboneElement to Reference(Practitioner | PractitionerRole | Organization)</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>performer</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>performerType</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>recorder</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Type PractitionerRole</li>
+					</ul>
+				</td>
+			</tr>	
+			<tr>
+				<td>courseOfTherapyType</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>dosageInstruction.site</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from http://hl7.org/fhir/ValueSet/approach-site-codes to https://fhir.hl7.org.uk/ValueSet/UKCore-BodySite</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>dosageInstruction.route</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1 to https://fhir.hl7.org.uk/ValueSet/UKCore-SubstanceOrProductAdministrationRoute</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>dosageInstruction.method</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from http://hl7.org/fhir/ValueSet/administration-method-codes to https://fhir.hl7.org.uk/ValueSet/UKCore-MedicationDosageMethod</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>dispenseRequest.initialFill</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>dispenseRequest.dispenseInterval</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>dispenseRequest.numberOfRepeatsAllowed</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>substitution</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>				
+			</tbody>
+	</table>
+	<h4>Graphical relationship diagram</h4>
+	<img class="diagram" src="./Relations/MedicationRequest.png" alt="Graphical relationship diagram of Medication Request resource"></img>
+</div>

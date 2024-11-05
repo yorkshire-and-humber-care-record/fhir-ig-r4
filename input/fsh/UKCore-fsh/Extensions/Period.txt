@@ -1,0 +1,20 @@
+Extension: period
+Id: organization-period
+Title: "Period"
+Description: "The date range that this organization should be considered available."
+Context: Organization
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension[=].valueCode = #pa
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 1
+* ^url = "http://hl7.org/fhir/StructureDefinition/organization-period"
+* ^status = #draft
+* ^date = "2015-02-21"
+* ^publisher = "Health Level Seven, Inc. - FHIR WG"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "HL7"
+* . 0..1
+* . ^definition = "The date range that this organization should be considered available."
+* url = "http://hl7.org/fhir/StructureDefinition/organization-period" (exactly)
+* value[x] 1..
+* value[x] only period

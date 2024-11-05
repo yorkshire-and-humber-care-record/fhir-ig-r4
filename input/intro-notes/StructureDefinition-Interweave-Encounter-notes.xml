@@ -1,0 +1,260 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+		a[name="2"] {
+			pointer-events: none;
+		}
+		img.diagram {			
+			width: 90%;
+			padding:10px 0px 10px 0px;
+		}
+	</style>
+	<h4>Differences between Interweave STU3 and R4 profiles</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Element name</th>
+				<th>Change details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>extension:dischargeMethod</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:encounterTransport</td>
+				<td>
+					<ul>
+						<li>Deleted</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:emergencyCareDischargeDestination</td>
+				<td>
+					<ul>
+						<li>url (Fixed value) changed from https://fhir.yhcr.nhs.uk/StructureDefinition/Extension-Interweave-EDDischargeDestination to https://fhir.interweavedigital.nhs.uk/R4/StructureDefinition/Extension-Interweave-EDDischargeDestination</li>
+						<li>Change valueset from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-EDDischargeDestination to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-EDDischargeDestination</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:emergencyCareDischargeStatus</td>
+				<td>
+					<ul>
+						<li>url (Fixed value) changed from https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-EmergencyCareDischargeStatus-1 to https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-EmergencyCareDischargeStatus</li>
+						<li>Change valueset from https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-EmergencyCareDischargeStatus-1 to https://fhir.hl7.org.uk/ValueSet/UKCore-EmergencyCareDischargeStatus</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:legalStatus</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:outcomeOfAttendance</td>
+				<td>
+					<ul>
+						<li>url (Fixed value) changed from https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-OutcomeOfAttendance-1 to https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-OutcomeOfAttendance</li>
+						<li>Change valueset from https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-OutcomeOfAttendance-1 to https://fhir.hl7.org.uk/ValueSet/UKCore-OutcomeOfAttendance</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:serviceType</td>
+				<td>
+					<ul>
+						<li>Deleted (added as normal element)</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>identifier:localIdentifier.system</td>
+				<td>
+					<ul>
+						<li>changed fixed value from https://fhir.yhcr.nhs.uk/Id/local-encounter-identifier to https://fhir.interweavedigital.nhs.uk/Id/local-encounter-identifier</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>class</td>
+				<td>
+					<ul>
+						<li>Change valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-EncounterClass-1 to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-EncounterClass</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>type</td>
+				<td>
+					<ul>
+						<li>Change valueSet from https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-EncounterType-1 to https://fhir.hl7.org.uk/ValueSet/UKCore-EncounterType</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>serviceType</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>priority</td>
+				<td>
+					<ul>
+						<li>Change valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-EncounterPriority-1 to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-EncounterPriority</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>basedOn</td>
+				<td>
+					<ul>
+						<li>Renamed from incomingReferral to basedOn</li>
+						<li>Type Reference: Added Target Type ServiceRequest</li>
+						<li>Type Reference: Removed Target Type ReferralRequest</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>reasonCode</td>
+				<td>
+					<ul>
+						<li>Renamed from reason to reasonCode</li>
+						<li>Change valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-R4EncounterReason to http://hl7.org/fhir/ValueSet/encounter-reason</li>
+					</ul>
+				</td>
+			</tr>			
+			<tr>
+				<td>reasonReference</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>diagnosis.use</td>
+				<td>
+					<ul>
+						<li>Renamed from diagnosis.role to diagnosis.use</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>diagnosis.condition</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Type Procedure</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>hospitalization.extension:dischargeMethod</td>
+				<td>
+					<ul>
+						<li>Deleted (moved to top level)</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>hospitalization.extension:admissionMethod</td>
+				<td>
+					<ul>
+						<li>url (Fixed value) changed from https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1 to https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AdmissionMethod</li>
+						<li>Change valueset from https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AdmissionMethod-1 to https://fhir.hl7.org.uk/ValueSet/UKCore-AdmissionMethod</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>hospitalization.extension:medicallySafeForDischarge</td>
+				<td>
+					<ul>
+						<li>url (Fixed value) changed from https://fhir.yhcr.nhs.uk/StructureDefinition/Extension-Interweave-MedicallySafeForDischarge to https://fhir.interweavedigital.nhs.uk/R4/StructureDefinition/Extension-Interweave-MedicallySafeForDischarge</li>						
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>hospitalization.extension:medicallySafeForDischarge.extension:status</td>
+				<td>
+					<ul>
+						<li>Change valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-MedicallySafeForDischargeStatus-1 to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-MedicallySafeForDischargeStatus</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>hospitalization.origin</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Type Organization</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>hospitalization.admitSource</td>
+				<td>
+					<ul>
+						<li>Change valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-AdmissionSource-1 to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-AdmissionSource</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>hospitalization.destination</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Type Organization</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>hospitalization.dischargeDisposition</td>
+				<td>
+					<ul>
+						<li>Change valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-DischargeDestination-1 to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/Interweave-DischargeDestination</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>location.physicalType</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			</tbody>
+	</table>
+	<h4>Graphical relationship diagram</h4>
+	<img class="diagram" src="./Relations/Encounter.png" alt="Encounter graphical relationship diagram"></img>
+</div>

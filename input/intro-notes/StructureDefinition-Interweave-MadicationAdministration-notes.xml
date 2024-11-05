@@ -1,0 +1,159 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+		a[name="2"] {
+			pointer-events: none;
+		}
+		img.diagram {			
+			width: 90%;
+			padding:10px 0px 10px 0px;
+		}
+	</style>
+	<h4>Differences between Interweave STU3 and R4 profiles</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Element name</th>
+				<th>Change details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>status</td>
+				<td>
+					<ul>
+						<li>Change of codeSystem from http://hl7.org/fhir/medication-admin-status to http://terminology.hl7.org/CodeSystem/medication-admin-status</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>category</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from https://fhir.yhcr.nhs.uk/ValueSet/Interweave-MedicationRequestCategory-1 to http://hl7.org/fhir/ValueSet/medication-admin-status</li>
+						<li>Change of codeSystem from http://hl7.org/fhir/medication-request-category to http://terminology.hl7.org/CodeSystem/medication-admin-category</li>
+						<li>Change of codeSystem from https://fhir.yhcr.nhs.uk/CodeSystem/Interweave-MedicationRequestCategory-1 to https://fhir.hl7.org.uk/CodeSystem/UKCore-MedicationAdministrationCategory</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>statusReason</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>medication[x]:CodeableConcept</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>performer.function</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>performer.actor</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Type PractitionerRole</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>notGiven</td>
+				<td>
+					<ul>
+						<li>Deleted</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>reasonNotGiven</td>
+				<td>
+					<ul>
+						<li>Deleted</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>reasonCode</td>
+				<td>
+					<ul>
+						<li>change of codeSystem from http://hl7.org/fhir/reason-medication-given to http://terminology.hl7.org/CodeSystem/reason-medication-given</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>reasonReference</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Type DiagnosticReport</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>request</td>
+				<td>
+					<ul>
+						<li>Renamed from prescription to request</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>dosage.site</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from http://hl7.org/fhir/ValueSet/approach-site-codes to https://fhir.hl7.org.uk/ValueSet/UKCore-BodySite</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>dosage.route</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1 to https://fhir.hl7.org.uk/ValueSet/UKCore-SubstanceOrProductAdministrationRoute</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>dosage.method</td>
+				<td>
+					<ul>
+						<li>Changed valueSet from http://hl7.org/fhir/ValueSet/administration-method-codes to https://fhir.hl7.org.uk/ValueSet/UKCore-MedicationDosageMethod</li>
+					</ul>
+				</td>
+			</tr>			
+			</tbody>
+	</table>
+	<h4>Graphical relationship diagram</h4>
+	<img class="diagram" src="./Relations/MedicationAdministration.png" alt="Graphical relationship diagram of Medication Administration resource"></img>
+</div>

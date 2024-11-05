@@ -1,0 +1,110 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+	<style type="text/css">
+		table.gridNotes {
+			margin-bottom: 10px;
+			border: 1px black solid;
+			margin-right: auto;
+		}
+		table.gridNotes td, th {
+			border: 1px grey solid;
+			border-spacing: 0;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+		table.gridNotes tr:nth-child(even) {
+			background-color: #f4fff4!important;
+			color: #000000!important;
+		}
+		table.gridNotes tr:nth-child(odd) {			
+			color: #000000!important;
+		}
+		a[name="1"] {
+			pointer-events: none;
+		}
+		a[name="2"] {
+			pointer-events: none;
+		}
+		img.diagram {			
+			width: 90%;
+			padding:10px 0px 10px 0px;
+		}
+	</style>
+	<h4>Differences between Interweave STU3 and R4 profiles</h4>
+	<table class="gridNotes">
+		<thead>
+			<tr>
+				<th>Element name</th>
+				<th>Change details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>extension:noteR5</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>extension:supportingInfoR5</td>
+				<td>
+					<ul>
+						<li>Added Element</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>identifier:localIdentifier.system</td>
+				<td>
+					<ul>
+						<li>Change of Fixed value from https://fhir.yhcr.nhs.uk/Id/local-diagnosticReport-identifier to https://fhir.interweavedigital.nhs.uk/Id/local-diagnosticReport-identifier</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>basedOn</td>
+				<td>
+					<ul>
+						<li>Type Reference: Added Target Type ServiceRequest</li>
+						<li>Type Reference: Removed Target Types ProcedureRequest, ReferralRequest</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>code</td>
+				<td>
+					<ul>
+						<li>Change valueset from https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ReportCodeSnCT-1 to https://fhir.interweavedigital.nhs.uk/R4/ValueSet/UKCore-ReportCode</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>encounter</td>
+				<td>
+					<ul>
+						<li>Renamed from context to encounter</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>performer</td>
+				<td>
+					<ul>
+						<li>Type changed from BackboneElement to Reference(Practitioner | PractitionerRole | Organization | CareTeam)</li>
+					</ul>
+				</td>
+			</tr>			
+			<tr>
+				<td>conclusionCode</td>
+				<td>
+					<ul>
+						<li>Renamed from codedDiagnosis to conclusionCode</li>
+					</ul>
+				</td>
+			</tr>				
+			</tbody>
+	</table>
+	<h4>Graphical relationship diagram</h4>
+	<img class="diagram" src="./Relations/DiagnosticReport.png" alt="DiagnosticReport resource graphical relationship diagram"></img>
+	</div>

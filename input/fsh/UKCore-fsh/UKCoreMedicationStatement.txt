@@ -1,0 +1,62 @@
+Alias: $Extension-UKCore-PharmacistVerifiedIndicator = https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-PharmacistVerifiedIndicator
+Alias: $Extension-UKCore-MedicationPrescribingOrganizationType = https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationPrescribingOrganizationType
+Alias: $Extension-UKCore-MedicationStatementLastIssueDate = https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationStatementLastIssueDate
+//Alias: $UKCore-MedicationStatementCategory = https://fhir.hl7.org.uk/ValueSet/UKCore-MedicationStatementCategory
+Alias: $UKCore-MedicationCode = https://fhir.hl7.org.uk/ValueSet/UKCore-MedicationCode
+Alias: $UKCore-BodySite = https://fhir.hl7.org.uk/ValueSet/UKCore-BodySite
+Alias: $UKCore-SubstanceOrProductAdministrationRoute = https://fhir.hl7.org.uk/ValueSet/UKCore-SubstanceOrProductAdministrationRoute
+Alias: $UKCore-MedicationDosageMethod = https://fhir.hl7.org.uk/ValueSet/UKCore-MedicationDosageMethod
+
+Profile: UKCoreMedicationStatement
+Parent: MedicationStatement
+Id: UKCore-MedicationStatement
+Title: "UK Core MedicationStatement"
+Description: "This profile defines the UK constraints and extensions on the International FHIR resource [MedicationStatement](https://hl7.org/fhir/R4/MedicationStatement.html)."
+* ^version = "2.5.0"
+* ^status = #active
+* ^date = "2023-12-12"
+* ^publisher = "HL7 UK"
+* ^contact.name = "HL7 UK"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "ukcore@hl7.org.uk"
+* ^contact.telecom.use = #work
+* ^contact.telecom.rank = 1
+* ^purpose = "This profile allows exchange of a record of a medication that is being consumed by a patient. \r\n\r\nA MedicationStatement may indicate that the individual may be taking the medication now or has taken the medication in the past or will be taking the medication in the future. The source of this information can be the individual, significant other (such as a family member or spouse), or a clinician."
+* ^copyright = "Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html."
+* extension contains
+    $Extension-UKCore-PharmacistVerifiedIndicator named pharmacistVerifiedIndicator 0..1 and
+    $Extension-UKCore-MedicationPrescribingOrganizationType named medicationPrescribingOrganizationType 0..1 and
+    $Extension-UKCore-MedicationStatementLastIssueDate named medicationStatementLastIssueDate 0..1
+* extension[pharmacistVerifiedIndicator] ^short = "Indicates whether a pharmacist verified a medication."
+* extension[medicationPrescribingOrganizationType] ^short = "Identifies if the medication was `prescribed-at-gp-practice` or `prescribed-by-another-organisation`.\\n\\nThis extension is likely only to be populated by GP systems."
+* extension[medicationStatementLastIssueDate] ^short = "The date or date/time that the medication described in the `MedicationStatement` was last requested/prescribed.\\n\\nThe presence of this data does not imply medication has been dispensed or supplied to the patient."
+* identifier MS
+* identifier ^short = "Allows the resource to be referenced within / by other resources."
+* identifier.system 1..
+* identifier.value 1..
+* basedOn MS
+* basedOn ^short = "To reference to a `MedicationRequest` resource, where applicable."
+* status MS
+* status ^short = "A code representing the patient or other source's judgement about the state of the medication used that this statement is about."
+* category MS
+* category from UKCore-MedicationStatementCategory (extensible)
+* category ^short = "Indicates where the medication is expected to be consumed or administered."
+* medication[x] MS
+* medication[x] from $UKCore-MedicationCode (preferred)
+* medication[x] ^short = "Identifies the medication being administered."
+* subject MS
+* subject ^short = "Who is / was taking the medication."
+* effective[x] MS
+* effective[x] ^short = "The date / time, or interval, when the medication is / was / will be taken."
+* dateAsserted MS
+* dateAsserted ^short = "To timestamp the statement assertion."
+* informationSource MS
+* informationSource ^short = "To reference other resources, where applicable."
+* derivedFrom MS
+* derivedFrom ^short = "To reference other resources, where applicable."
+* dosage MS
+* dosage ^short = "The medication dosage for the statement."
+* dosage.asNeeded[x] ^binding.strength = #preferred
+* dosage.site from $UKCore-BodySite (preferred)
+* dosage.route from $UKCore-SubstanceOrProductAdministrationRoute (preferred)
+* dosage.method from $UKCore-MedicationDosageMethod (preferred)
